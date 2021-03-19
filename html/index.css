@@ -1,0 +1,695 @@
+body {
+  background: none !important;
+}
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+img.lewa{
+height: 20 0px;
+width: 200px;
+border-radius: 100%;
+position: relative; z-index: 1;
+right:10px;
+
+}
+
+iframe{
+width: 100%;
+height: 100%;
+align-items: center;
+position: relative;
+
+}
+
+#copyright{
+  background-color: black;
+  color: white;
+  font-size: 35;
+  position: relative;
+  bottom: -350px;
+  
+}
+
+h1{
+  position: relative;
+  color: white;
+  left: 1100px;
+  top: -35px;
+
+}
+
+
+span.wpisCount{
+  color: white;
+  font-size: 16px;;
+  background-color: black;
+  opacity: 0.8;
+  padding: 10px;
+  position: relative;
+  bottom:10px;
+  left: 10px;
+}
+
+#login{
+  width: 300px;
+  height: 50px;
+  padding: 9px;
+  position: relative;
+  background-color: none;
+  opacity: 0.8;
+  border-radius: 3px;
+  color: white;
+  left:870px;
+  top: -20px;
+}
+/*********************************************   DIVy    ********************************************************************************/
+div.head{
+  height: 50px;
+}
+
+div.menuDiv{
+border-radius: 25px;
+height: 600px;
+
+position: relative; 
+left: 210px;
+width: 1000px;
+
+}
+
+
+#DIVbuttons {
+position: absolute;
+left: -10px;
+top: 200px;
+background-color:none;
+width: 250px;
+padding: 15px;
+border-radius: 10px;
+opacity: 0.9;
+}
+
+#container {
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  width: 1200px;
+
+background-image: url('https://i.imgur.com/2fvsiNn.png');
+
+border: 2px solid aliceblue;
+border-image-source: url('https://i.imgur.com/n9Ifmmi.png');
+border-image-width: 23;
+border-image-slice: 70;
+border-image-outset: 20;
+
+}
+#DIVubezpieczenie{
+  height: 700px;
+  width: 1000px;
+position: relative;
+left: 220px;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+div.tabelka1{
+position: relative;
+left: 600px;
+top: -70px;
+width: 280px;
+height: 344px;
+}
+
+div.faktura{
+width: 600px;
+position: relative; 
+left: 377px;
+top: -15px;
+
+}
+#SearchArrayDiv{
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 750px;
+  left: 220px;
+  width: 980px;
+  
+}
+#SearchArrayDivLast{
+  position: relative; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 50px;
+  left: 220px;
+  height: 650px;
+  width: 980px;
+  }
+
+#SearchArrayDivLast1{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  top:-320px;
+  height: 280px;
+}
+
+div.SerchArray{
+color: white;
+position: relative;
+bottom:1px;
+}
+
+#DIVform{
+position: relative;
+left: 220px;
+width: 1000px;
+top: -100px;
+
+}
+
+#form1{
+  position: relative; 
+  left: -20px;
+  top: 80px;
+  }
+#form2{
+position: relative; left:600px; bottom:669px;
+}
+
+#DIVblacklist{
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 250px;
+  height: 700px;
+  width: 950px;
+}
+
+#DIVstats{
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 250px;
+  top: -40px;
+  width: 950px;
+  height: 800px;
+}
+/************************************************************      PRZYCISKI     **************************************************************/
+
+button.menubutton{
+width:210px;
+height:50px;
+font-size: 25px;
+color: rgb(255, 255, 255);
+background-color:rgb(0, 83, 207);
+border: none;
+
+}
+
+button.submit{
+border-radius: 15px;
+padding: 10px;
+height: 50px;
+width: 250px;
+color: white;
+text-size-adjust: 38px;
+}
+
+#ButtonFaktura{
+  background-color: brown;
+  border-color: brown;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  position: relative;
+  left: 25px;
+}
+
+#ButtonDelete{
+position: relative;
+width: 150px;
+top: -700px;
+left: 290px;
+color: black;
+}
+
+#ButtonEdit{
+position: relative; 
+width: 75px;
+top: -650px;
+color: black;
+left: 880px;
+}
+#RefStats{
+position: relative; bottom:190px;
+width: 800px;
+background-color: black;
+padding: 10px;
+color: white;
+font-size: 58px;
+top: -10px;
+left: 200px;
+}
+#AddNewForm{
+width:450px ;
+position: relative; 
+color: black;
+font-size: 20px;
+font-weight: 900;
+text-align: center;
+}
+#Button{
+width:100% ;
+position: relative; bottom:150px ;
+}
+
+#ButtonSearch{
+position: relative;
+
+}
+#ButtonSearch2{
+  position: relative;
+  
+  }
+
+button.submitszukaj{
+  background-color: black;
+  opacity: 0.8;
+  border: none;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+  position:relative;
+  left: 95px;
+}
+
+#ButtonSearchByID{
+width:100% ;
+position: relative; bottom:150px ;
+}
+#ClearForm1{
+  width: 450px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 28px;
+  border-radius: 10px;
+  position: relative;
+  left: -600px;
+  bottom: -100px;
+}
+#ButtonSearchLast{
+position: relative;
+background-color: rgb(0, 0, 0);
+border: none;
+width: 50px;
+height: 45px;
+left: 899px;
+top: 10px;
+opacity: 0.6;
+}
+#ButtonEditSubmit{
+width: 450px;
+position: relative;
+top: -590px;
+color: black;
+left: 420px;
+}
+#AddBL{
+width: 50%;
+position: relative; 
+top: 10px;
+left: 40px;
+width: 400px;
+background-color: rgb(21, 63, 3);
+opacity: 0.9;
+border: none;
+color: white(0, 0, 0);
+font-size: 20px;
+font-weight: 900;
+text-align: center;
+}
+#szukajBL1{
+width: 50%;
+position: relative; 
+left: 480px;
+top: -180px;
+width: 400px;
+background-color: rgb(0, 0, 0);
+opacity: 0.9;
+border: none;
+color: white(0, 0, 0);
+font-size: 20px;
+}
+#szukajBL2{
+width: 50%;
+position: relative; 
+left: 75px;
+top: -120px;
+
+width: 400px;
+background-color: rgb(0, 0, 0);
+opacity: 0.9;
+border: none;
+color: white(0, 0, 0);
+font-size: 20px;
+}
+
+/*********************************************************      FORMULARZE      **********************************************/
+
+#szukaj{
+  bottom: 20px;
+  left: 300px;
+  width: 100px;
+  height: 20px;
+  border-radius: 100px;
+
+}
+#szukaj input[type=text]{
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+  height: 55px;
+  font-size: 25px;
+  color: rgb(80, 80, 80);
+  border-radius: 10px;
+  margin: auto;
+
+}
+
+form.arkusz{
+position:relative;
+font-size: 12px;
+color: rgb(255, 255, 255);
+font-family: 'Open Sans', sans-serif;
+background-color: rgb(0, 0, 0);
+position: relative; 
+width:50%;
+padding: 10px;
+border-radius: 10px;
+opacity: 0.8;
+}
+form.szukaj{
+  position:relative;
+  font-size: 26px;
+  color: rgb(27, 27, 27);
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(224, 225, 228);
+  width:1px;
+  height: 1px;
+  }
+
+  #blform{
+    position: relative;
+    width: 450px;
+
+  }
+  #blszuk1{
+    position: relative;
+    width: 450px;
+    left: 480px;
+    top: -190px;
+
+  }
+  #blform input[type=text]{
+    width: 400px;
+    position: relative;
+    left: 25px;
+  }
+  #blszuk1 input[type=text]{
+    width: 400px;
+    position: relative;
+    left: 25px;
+
+  }
+
+form.delete{
+  position: relative; 
+  top: -730px;
+  left: 600px;
+  width: 50%;
+}
+
+form.edit{
+  position: relative; 
+  top: -650px;
+  width:50%;
+}
+#edit input[type=text]{
+height: 30px;
+width: 350px;
+padding: 10px;
+border-radius: 10px;
+position: relative;
+left: 500px;
+bottom: -55px;
+}
+  #delete input[type=text]{
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    left: -600px;
+    bottom: -80px;
+    
+}
+
+form.arkusz input[type=text], select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+
+}
+
+form.arkusz input[type=button], select {
+width: 100%;
+background-color: #a10000;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+form.arkusz input[type=reset], select:hover {
+background-color: #d80000;
+color: white;
+height: 40px;
+width: 100%;
+border-radius: 4px;
+}
+
+form.szukaj input[type=text], select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+form.szukaj input[type=button], select {
+width: 100%;
+background-color: #a10000;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+form.szukaj input[type=reset], select:hover {
+background-color: #d80000;
+color: white;
+height: 40px;
+width: 100%;
+border-radius: 4px;
+}
+#arkusz1{
+width: 450px;
+position: relative;
+left: 10px;
+
+}
+#arkusz2{
+width: 450px;
+position: relative;
+top: 115px;
+left:-100px;
+}
+
+input.textarea{
+width: 100%;
+}
+form.faktura{
+position:relative;
+font-size: 30px;
+color: rgb(27, 27, 27);
+font-family: 'Open Sans', sans-serif;
+background-color: rgb(0, 0, 0);
+opacity: 0.8;
+width:350px;
+height: 380px;
+border-radius: 15px;
+top: 50px;
+left: -280px;
+}
+
+form.faktura input[type="text"]{
+width: 300px;
+height: 40px;
+position: relative;
+top: 30px;
+left: 20px;
+text-align: center;
+border-radius: 5px;
+}
+
+#szukajlast{
+  height: 1px;
+  width: 1px;
+  left: 450px;
+}
+#szukajlast input[type="text"]{
+width: 500px;
+height: 50px;
+border-radius: 10px;
+background-color: black;
+color: white;
+opacity: 0.8;
+}
+
+input.szukajmenu{
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  position: relative;
+  left: 150px;
+}
+
+
+/********************************************************************    TABELE      ********************************************************/
+#TableMechanic{
+  width: 400px;
+  height: 700px;
+  position: relative;
+  top: 10px;
+}
+
+#TableSheriff{
+  width: 400px;
+  height: 700px;
+  position:absolute;
+  float: right;
+  right: 100px;
+  top: 10px;
+  
+}
+
+table.tab{
+font-family: "Open Sans", sans-serif;
+border-collapse: collapse;
+position: relative; bottom:290px;
+color: white;
+}
+
+
+table.tab td, table.tab th{
+border: 1px solid rgb(255, 255, 255);
+padding: 8px;
+background-color: black;
+opacity: 0.75;
+}
+
+table.tab th{
+text-align: center;
+background-color: black;
+opacity: 0.8;
+color: white;
+border: none; 
+
+
+}
+
+#tabela1{
+  width: 300px;
+  height: 320px;
+}
+
+#tabela1 th, #tabela1 tr, #tabela1 td{
+border: none; 
+}
+#SearchTableLast{
+  top: -1px;
+}
+
+#SearchTableLast1{
+  top: -1px;
+}
+
+#SearchTable{
+  position: relative;
+  top:10px;
+}
+
+#TableStats1{
+position: relative;
+top: -1px;
+width: 100px;
+
+}
+#TableStats2{
+  position: absolute;
+  width: 100px;
+  left: 335px;
+  top: 80px;
+}
+#TableStats3{
+  position: absolute;
+  width: 100px;
+  left: 650px;
+  top: 80px;
+}
+
+#BLtable{
+text-align: center;
+background-color: black;
+opacity: 0.9;
+color: white;
+border: none;
+top: -100px; 
+position: relative; 
+overflow-y: scroll;
+overflow-x: hidden;
+width: 780px;
+
+}
+
+img.loginzdj{
+  width: 100px;
+  height: 100px;
+  }
+#zdjlogin{
+  position: relative;
+  left: 1100px;
+  top: -350px;
+}

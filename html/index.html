@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./functions.js" type="text/javascript"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/418b370947.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header" class="head">
+
+            <span id="login" style="margin-bottom: 30px;"></span>  
+
+
+            <h1><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i>  <i class="fas fa-battery-three-quarters"></i> 80%</h1>
+
+            <div id="DIVbuttons" class="buttonsDIV">
+    
+                <button id="menu" class="menubutton" onclick="btMenu()"> <i class="fas fa-bars" id="menu"></i> Menu </button>
+                </br></br></br>
+    
+            
+                <button id="form" class="menubutton" onclick="btForm()"><i class="fas fa-user-plus"></i> Dodaj Rekord </button>
+                </br></br></br>
+               
+                
+    
+                    <button id="searchLast" class="menubutton" onclick="btsearchLast()"><i class="fas fa-search"></i> Ostatnie</button>
+                </br></br></br>
+    
+                    <button id="statystyki"  class="menubutton" onclick="btStaty()"><i class="fas fa-chart-pie"></i> Statystyki </button>
+                </br></br></br>
+
+                <button id="ubezpieczenie"  class="menubutton" onclick="btUbezpieczenie()"><i class="fas fa-database"></i> NFZ </button>
+                </br></br></br>
+    
+                    <button id="blacklist" class="menubutton" onclick="btBlack()"><i class="fas fa-frown"></i> Uwagi </button>
+                </br></br></br></br></br></br></br></br>
+    
+                    <button id="close" class="menubutton"><i class="fas fa-sign-out-alt"></i> Wyjdź</button> 
+    
+            </div>
+
+            </div>
+
+            <div id="DIVmenu" class="menuDiv">
+            
+
+                <input id="szukform" class="szukajmenu" type="text"  placeholder="Wyszukaj pacjenta..." onClick="this.select();">
+                <button id="ButtonSearch" type="button" class="submitszukaj"  onclick="btSerch()"> <i class="fas fa-search" id="search"></i> </button>
+                <input id="szukformlekarz" class="szukajmenu" type="text"  placeholder="Wyszukaj wpisy lekarza..." onClick="this.select();">
+                <button id="ButtonSearch2" type="button" class="submitszukaj"  onclick="btSerch()"> <i class="fas fa-search" id="search"></i> </button>
+    
+                            
+  
+
+
+
+            <div class="faktura" id="faktura">
+                <form class="faktura">
+                    <input type="text" id="ID" placeholder="ID Pacjenta" onClick="this.select();">
+                </br></br></br>
+                    <input type="text" id="powod" placeholder="Powód wystawienia faktury" onClick="this.select();">
+                </br></br></br>
+                    <input type="text" id="kwota" placeholder="Kwota faktury" onClick="this.select();">
+                 </br></br></br>
+                    <button id="ButtonFaktura" type="button"> Wystaw Fakture </button>
+                </form>
+            </div>
+
+     
+
+            <span id="copyright"> ®Tablet maked and designed by ReVeR V-1.2</span>
+
+            <div class="tabelka1">
+                <table class="tab" id="tabela1"></table>
+            </div>
+
+            <div id="SearchArrayDivLast1" class="SerchArray">
+            </br>
+            <table id="SearchTableLast1" class="tab"></table>
+        </div>
+
+        </div>
+        <!-- ***************************************************** DIVy Baza danych **********************************************************************************-->
+        <div id="DIVform" style="display: none;">
+            <div id="form1">
+            <form class="arkusz" id="arkusz1">
+                Data Zabiegu: <input type="date" id="dataform" required="true">
+                <br></br>
+                Dane Pacjenta: <input type="button" id="pobierzdanepacjenta" value="Pobierz dane"> <input type="text" id="daneform" required="true"> 
+                Odniesione Obrazenia: </br>
+                <input type="checkbox" id="f1" name="Obr" value="Plasterek">
+                <label for="Obr"> Plasterek</label><br>
+                <input type="checkbox" id="f2" name="Obr" value="Obdarcia/Siniaki">
+                <label for="Obr"> Obdarcia/Siniaki</label><br>
+                <input type="checkbox" id="f3" name="Obr" value="Rozciety luk brwiowy">
+                <label for="Obr"> Rozciety luk brwiowy</label><br>
+                <input type="checkbox" id="f4" name="Obr" value="Urazy glowy">
+                <label for="Obr"> Urazy glowy</label><br>
+                <input type="checkbox" id="f5" name="Obr" value="Rany Ciete">
+                <label for="Obr"> Rany Ciete</label><br>
+                <input type="checkbox" id="f6" name="Obr" value="Zlamanie zamkniete">
+                <label for="Obr"> Zlamanie zamkniete</label><br>
+                <input type="checkbox" id="f7" name="Obr" value="Zlamanie otwarte">
+                <label for="Obr"> Zlamanie otwarte</label><br>
+                <input type="checkbox" id="f8" name="Obr" value="Choroby wewnetrzne">
+                <label for="Obr"> Choroby wewnetrzne</label><br>
+                <input type="checkbox" id="f9" name="Obr" value="Rana postrzalowa barku">
+                <label for="Obr"> Rana postrzalowa barku</label><br>
+                <input type="checkbox" id="f10" name="Obr" value="Rana postrzalowa reki">
+                <label for="Obr"> Rana postrzalowa reki</label><br>
+                <input type="checkbox" id="f11" name="Obr" value="Rana postrzalowa torsu">
+                <label for="Obr"> Rana postrzalowa torsu</label><br>
+                <input type="checkbox" id="f12" name="Obr" value="Rana postrzalowa glowy/szyi">
+                <label for="Obr"> Rana postrzalowa glowy/szyi</label><br>
+                <input type="checkbox" id="f13" name="Obr" value="Wielokrotne i rozne obrazenia">
+                <label for="Obr"> Wielokrotne i rozne obrazenia</label><br>
+                <input type="checkbox" id="f14" name="Obr" value="Oparzenia">
+                <label for="Obr"> Oparzenia</label><br>
+                <input type="checkbox" id="f15" name="Obr" value="Omdlenia">
+                <label for="Obr"> Omdlenia</label><br>
+                <input type="checkbox" id="f16" name="Obr" value="Podtopienia">
+                <label for="Obr"> Podtopienia</label><br>
+                <input type="checkbox" id="f17" name="Obr" value="Wybicie/skrecenie stawu">
+                <label for="Obr"> Wybicie/skrecenie stawu</label><br>
+                <input type="checkbox" id="f18" name="Obr" value="Sciagniecie szwow">
+                <label for="Obr"> Sciagniecie szwow</label><br>
+                <input type="checkbox" id="f19" name="Obr" value="Sciagniecie gipsu">
+                <label for="Obr"> Sciagniecie gipsu</label><br>
+                Inne:
+                <input type="text" id="obrazeniaform" required="true">
+                </br>
+               
+            </form>
+                </div>
+                <div id="form2">
+            <form class="arkusz" id="arkusz2">
+                Grupa Krwi: </br>
+                <input type="checkbox" id="ffff1" name="krew" value="AB+">
+                <label for="krew"> AB Rh+</label><br>
+                <input type="checkbox" id="ffff2" name="krew" value="AB-">
+                <label for="krew"> AB Rh-</label><br>
+                <input type="checkbox" id="ffff3" name="krew" value="A+">
+                <label for="krew"> A Rh+</label><br>
+                <input type="checkbox" id="ffff4" name="krew" value="A-">
+                <label for="krew"> A Rh-</label><br>
+                <input type="checkbox" id="ffff5" name="krew" value="B+">
+                <label for="krew"> B Rh+</label><br>
+                <input type="checkbox" id="ffff6" name="krew" value="B-">
+                <label for="krew"> B Rh-</label><br>
+                <input type="checkbox" id="ffff7" name="krew" value="0+">
+                <label for="krew"> 0 Rh+</label><br>
+                <input type="checkbox" id="ffff8" name="krew" value="0-">
+                <label for="krew"> 0 Rh-</label><br></br>
+                Ewentualne uszkodzenia wewnetrzne: <input type="text" id="uszkodzeniaform">
+                Zalecenia Lekarskie: </br>
+                <input type="checkbox" id="ff1" name="Zal" value="Wymagany Ponowny Zabieg">
+                <label for="Zal"> Wymagany Ponowny Zabieg</label><br>
+                <input type="checkbox" id="ff2" name="Zal" value="Wymagana Kontrola">
+                <label for="Zal"> Wymagana Kontrola</label><br>
+                <input type="checkbox" id="ff3" name="Zal" value="Brak">
+                <label for="Zal"> Brak</label><br></br>
+                Opcjionalnie Opis Do Zalecen <input type="text" id="opiszalform">
+                Czas wystawionego L4: </br>
+                <input type="checkbox" id="fff1" name="l4" value="15min">
+                <label for="l4"> 15min</label><br>
+                <input type="checkbox" id="fff2" name="l4" value="30min">
+                <label for="l4"> 30min</label><br>
+                <input type="checkbox" id="fff3" name="l4" value="45min">
+                <label for="l4"> 45min</label><br>
+                <input type="checkbox" id="fff4" name="l4" value="1h">
+                <label for="l4"> 1h</label><br>
+                <input type="checkbox" id="fff5" name="l4" value="24h">
+                <label for="l4"> 24h</label><br></br>
+                Lekarz Wystawiajacy: <input type="text" id="lekarzform" required="true"> 
+                <button id="AddNewForm" type="button" class="submit"> Prześlij Formularz </button>   
+            </form>
+
+            <input id="ClearForm1" class="clear" type="submit" value="Wyczyść Formularz">
+        </div>
+
+
+
+            <form class="edit" id="edit">
+            <input id="editform" type="text" required placeholder="ID rekordu do edycji... "onClick="this.select();">
+            </form>
+            <button id="ButtonEdit" type="button" class="submit"> Edytuj </button>
+            <button id="ButtonEditSubmit" type="button" class="submit"> Potwierdz Edycje </button>
+
+
+            <form class="delete" id="delete">
+            <input id="DeleteIDform" type="text" required placeholder="Wpisz ID rekordu do usunięcia..." onClick="this.select();">
+            </form>
+            <button id="ButtonDelete" type="button" class="submit"> Usun rekord </button>
+        </div>
+
+        <div id="DIVserch" style="display: none;">
+
+
+            <div id="SearchArrayDiv" class="SerchArray">
+                </br>
+                <span class="wpisCount">Ilość wpisów: </span> <span id="count" class="wpisCount"></span>
+                </br>
+                <table id="SearchTable" class="tab"></table>
+            </div>
+
+
+
+
+        </div>
+
+        <div id="DIVstats" style="display: none;">
+            <!-- <button id="RefStats">Pobierz najnowsze dane</button> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <table id="TableStats1" class="tab"></table>
+            <table id="TableStats2" class="tab"></table>
+            <table id="TableStats3" class="tab"></table>
+        </div>
+
+        <div id="DIVubezpieczenie" style="display: none;">
+            <!-- <button id="RefStats">Pobierz najnowsze dane</button> -->
+            <table id="TableMechanic" class="tab"></table>
+            <table id="TableSheriff" class="tab"></table>
+            
+        </div>
+
+        <div id="DIVserchLast" style="display: none;">
+            <form class="szukaj" id="szukajlast">
+            <input id="Lastszukform" type="text" placeholder="Wpisz Ilość Ostatnich Rekordów Do Wyświetlenia"  onClick="this.select();">
+            </form>
+            <button id="ButtonSearchLast" type="button" class="submit"><i class="fas fa-search" id="search"></i> </button>
+
+            <div id="SearchArrayDivLast" class="SerchArray">
+                </br>
+                <table id="SearchTableLast" class="tab"></table>
+            </div>
+        </div>
+
+        <div id="DIVblacklist" style="display: none;">
+            <form id="blform" class="arkusz">
+               <input type="text" id="daneformBL" placeholder=" Dane Pacjenta..." onClick="this.select();">
+                </br>
+                <input type="text" id="uwagaformBL" placeholder="Treść uwagi..." onClick="this.select();">
+            </form>
+            <button id="AddBL" type="button" class="submit"> Prześlij Formularz </button>
+
+            <form id="blszuk1" class="arkusz">
+             <input type="text" id="daneformBL1" placeholder="Szukaj Po Danych Pacjenta... " onClick="this.select();">
+            </form>
+            <button id="szukajBL1" type="button" class="submit"> Szukaj </button>
+            <button id="szukajBL2" type="button" class="submit"> Pokaż wszystko</button>
+
+            <table id="BLtable" class="tab"></table>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script>
+    function btMenu() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+
+        ubezp.style.display = "none";
+        menu.style.display = "block";
+        form.style.display = "none";
+        serch.style.display = "none";
+        stats.style.display = "none";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+
+
+    }
+    /***************************************************************Przyciski z bazy danych***************************************************************************************/
+    function btForm() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "none";
+        menu.style.display = "none";
+        form.style.display = "block";
+        serch.style.display = "none";
+        stats.style.display = "none";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+
+        let today = new Date().toISOString().substr(0, 10);
+            document.querySelector("#dataform").value = today;
+    }
+
+    function btSerch() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "none";
+        menu.style.display = "none";
+        form.style.display = "none";
+        serch.style.display = "block";
+        stats.style.display = "none";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+    }
+
+    function btStaty() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "none";
+        menu.style.display = "none";
+        form.style.display = "none";
+        serch.style.display = "none";
+        stats.style.display = "block";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+    }
+
+    function btsearchLast() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "none";
+        menu.style.display = "none";
+        form.style.display = "none";
+        serch.style.display = "none";
+        stats.style.display = "none";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "block";
+    }
+
+    function btBlack() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "none";
+        menu.style.display = "none";
+        form.style.display = "none";
+        serch.style.display = "none";
+        stats.style.display = "none";
+        blacklist.style.display = "block";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+    }
+    
+    function btUbezpieczenie() {
+        var menu = document.getElementById("DIVmenu");
+        var form = document.getElementById("DIVform");
+        var serch = document.getElementById("DIVserch");
+        var stats = document.getElementById("DIVstats");
+        var blacklist = document.getElementById("DIVblacklist");
+        var SearchArrayDiv = document.getElementById("SearchArrayDiv");
+        var serchLast = document.getElementById("DIVserchLast");
+        var ubezp = document.getElementById("DIVubezpieczenie");
+        
+        ubezp.style.display = "block";
+        menu.style.display = "none";
+        form.style.display = "none";
+        serch.style.display = "none";
+        stats.style.display = "none";
+        blacklist.style.display = "none";
+        SearchArrayDiv.style.display = "none";
+        serchLast.style.display = "none";
+    }
+</script>
+
+</html>
